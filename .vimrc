@@ -79,3 +79,9 @@ set expandtab
 
 "Set number
 set number
+
+"-------------------------------------------------------------------------------
+
+
+"Adding a package matchit
+packadd! matchit
