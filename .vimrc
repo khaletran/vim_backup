@@ -84,4 +84,35 @@ set number
 
 
 "Adding a package matchit
+"A package is a set of files that you can add to Vim. There are two kinds of
+"packages: optional(using the command below: packadd!) and automatically loaded
+"on startup.
+"The Vim distribution comes with a few packages that you can optionally use. For
+"example, the matchit plugin. This plugin makes the "%" command jump to matching
+"HTML tags, if/else/endif in Vim scripts, etc. Very useful, although it's not
+"backwards compatible (that's why it is not enabled by default).
+
+"To start using the matchit plugin, add one line to vimrc file: packadd!
+"matchit.
+
+
+"More information about packages can be found at :help packages
 packadd! matchit
+
+"-------------------------------------------------------------------------------
+
+"That's all! After restarting Vim you can find help about this plugin: :help
+"matchit
+
+"This works, because when :packadd loaded the plugin it also added the package
+"directory in 'runtimepath', so that the help file can be found.
+
+"You can find packages on the Internet in various places. It usually comes as an
+"archive or as a repository. For an archive you can follow these steps:
+"   1. create the package directory: 
+"       mkdir -p ~/.vim/pack/fancy, in which "fancy" can be any name of your
+"       liking. Ue one that describes the package.
+"   2. unpack the archive in that directory. This assumes the top directory in
+"   the archive is "start":
+"       cd ~/.vim/pack/fancy
+"       unxip /tmp/fancy.zip
